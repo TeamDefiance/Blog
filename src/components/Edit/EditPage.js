@@ -1,17 +1,17 @@
 import React, {Component} from 'react';
 import EditForm from './EditForm';
-import {loadTeamDetails, edit} from '../../models/team';
+import {loadPostDetails, edit} from '../../models/team';
 
 export default class EditPage extends Component {
     constructor(props) {
         super(props);
-        this.state = {name: '', description: '', submitDisabled: true};
+        this.state = {title: '', content: '', submitDisabled: true};
         this.bindEventHandlers();
     }
 
     componentDidMount() {
         // Populate form
-        loadTeamDetails(this.props.params.teamId, this.onLoadSuccess);
+        loadPostDetails(this.props.params.teamId, this.onLoadSuccess);
     }
 
     bindEventHandlers() {
@@ -24,8 +24,8 @@ export default class EditPage extends Component {
 
     onLoadSuccess(response) {
         this.setState({
-            name: response.name,
-            description: response.comment,
+            title: response.title,
+            content: response.content,
             submitDisabled: false
         });
     }
@@ -40,13 +40,13 @@ export default class EditPage extends Component {
     onSubmitHandler(event) {
         event.preventDefault();
         this.setState({submitDisabled: true});
-        edit(this.props.params.teamId, this.state.name, this.state.description, this.onSubmitResponse);
+        edit(this.props.params.teamId, this.state.title, this.state.content, this.onSubmitResponse);
     }
 
     onSubmitResponse(response) {
         if (response === true) {
             // Navigate away from login page
-            this.context.router.push('/');
+            this.context.router.push('/posts');
         } else {
             // Something went wrong, let the user try again
             this.setState({submitDisabled: true});
@@ -58,8 +58,8 @@ export default class EditPage extends Component {
             <div>
                 <h1>Edit Page</h1>
                 <EditForm
-                    name={this.state.name}
-                    description={this.state.description}
+                    title={this.state.title}
+                    content={this.state.content}
                     submitDisabled={this.state.submitDisabled}
                     onChangeHandler={this.onChangeHandler}
                     onSubmitHandler={this.onSubmitHandler}

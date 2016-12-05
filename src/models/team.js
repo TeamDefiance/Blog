@@ -8,8 +8,8 @@ function loadTeams(callback) {
         .then(callback);
 }
 
-function loadTeamDetails(teamId, onTeamSuccess) {
-    get('appdata', 'teams/' + teamId, 'kinvey')
+function loadPostDetails(postId, onTeamSuccess) {
+    get('appdata', 'posts/' + postId, 'kinvey')
         .then(onTeamSuccess);
 }
 
@@ -20,10 +20,10 @@ function loadUsersDetails(teamId, onUsersSuccess) {
 
 function edit(teamId, name, description, callback) {
     let teamData = {
-        name: name,
-        comment: description
+        title: name,
+        content: description
     };
-    update('appdata', 'teams/' + teamId, teamData, 'kinvey')
+    update('appdata', 'posts/' + teamId, teamData, 'kinvey')
         .then(callback(true));
 }
 
@@ -38,4 +38,4 @@ function create(name, description, callback) {
         });
 }
 
-export {loadTeams, loadTeamDetails, loadUsersDetails, edit, create};
+export {loadTeams, loadPostDetails, loadUsersDetails, edit, create};
