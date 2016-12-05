@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import CreateForm from '../Edit/EditForm';
-import {create} from '../../models/team';
+import {create} from '../../models/post';
 
 export default class CreatePage extends Component {
     constructor(props) {
         super(props);
-        this.state = {name: '', description: '', submitDisabled: false};
+        this.state = {title: '', content: '', submitDisabled: false};
         this.bindEventHandlers();
     }
 
@@ -26,26 +26,21 @@ export default class CreatePage extends Component {
     onSubmitHandler(event) {
         event.preventDefault();
         this.setState({submitDisabled: true});
-        create(this.state.name, this.state.description, this.onSubmitResponse);
+        create(this.state.title, this.state.content, this.onSubmitResponse);
     }
 
     onSubmitResponse(response) {
-        if (response === true) {
-            // Navigate away from login page
-            this.context.router.push('/');
-        } else {
-            // Something went wrong, let the user try again
-            this.setState({submitDisabled: true});
-        }
+        this.context.router.push('/');
     }
 
     render() {
         return (
             <div>
-                <h1>Create Page</h1>
+                <h1>Create New Post
+                </h1>
                 <CreateForm
-                    name={this.state.name}
-                    description={this.state.description}
+                    title={this.state.title}
+                    content={this.state.content}
                     submitDisabled={this.state.submitDisabled}
                     onChangeHandler={this.onChangeHandler}
                     onSubmitHandler={this.onSubmitHandler}
