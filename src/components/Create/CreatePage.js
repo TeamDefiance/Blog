@@ -30,7 +30,7 @@ export default class CreatePage extends Component {
     }
 
     onSubmitResponse(response) {
-        this.context.router.push('/');
+        this.context.router.push('/posts');
     }
 
     render() {
