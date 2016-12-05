@@ -13,6 +13,8 @@ import Details from './components/Posts/Details';
 import Edit from './components/Edit/EditPage';
 import Create from './components/Create/CreatePage';
 import Posts from './components/Posts/PostsPage'
+import DeletePost from './components/Delete/DeletePage'
+
 
 ReactDOM.render(
     <Router history={browserHistory}>
@@ -28,6 +30,7 @@ ReactDOM.render(
             <Route path="logout" component={Logout}/>
             <Route path="edit/:teamId" component={Edit}/>
             <Route path="create" component={Create}/>
+            <Route path="delete/:postId" component={DeletePost}/>
         </Route>
     </Router>,
     document.getElementById('root')

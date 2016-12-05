@@ -1,4 +1,4 @@
-import {get, post, update} from './requester';
+import {get, post, update, deleteItem} from './requester';
 
 function loadPosts(callback) {
     // Request teams from db
@@ -20,4 +20,10 @@ function loadPostDetails(postId, onTeamSuccess) {
         .then(onTeamSuccess);
 }
 
-export {loadPosts, create, loadPostDetails}
+function deletePost(postId, callback) {
+    deleteItem('appdata', 'posts', postId, 'kinvey')
+        .then(callback);
+
+}
+
+export {loadPosts, create, loadPostDetails, deletePost}
