@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import EditForm from './EditForm';
-import {loadPostDetails, edit} from '../../models/team';
+import {loadPostDetails, edit} from '../../models/post';
 
 export default class EditPage extends Component {
     constructor(props) {

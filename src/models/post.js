@@ -26,4 +26,13 @@ function deletePost(postId, callback) {
 
 }
 
-export {loadPosts, create, loadPostDetails, deletePost}
+function edit(teamId, name, description, callback) {
+    let teamData = {
+        title: name,
+        content: description
+    };
+    update('appdata', 'posts/' + teamId, teamData, 'kinvey')
+        .then(callback(true));
+}
+
+export {loadPosts, create, loadPostDetails, deletePost, edit}
