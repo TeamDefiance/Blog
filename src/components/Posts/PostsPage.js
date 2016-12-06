@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Post from './Post';
+import './Posts.css';
 import {loadPosts} from '../../models/post';
 
 export default class PostsPage extends Component {
@@ -29,7 +30,7 @@ export default class PostsPage extends Component {
 
         return (
             <div>
-                <h1>Posts</h1>
+                <h1>View All Posts</h1>
                 <div>
                     {this.state.posts.map((e, i) => {
                         return <Post key={i} title={e.title} id={e._id} content={e.content}/>

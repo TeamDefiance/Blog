@@ -16,7 +16,8 @@ export default class Post extends Component {
             <div className="post">
                     <span className="title">{this.props.title}</span>
                     <p>{this.subContent()}</p>
-                <Link to={"/posts/" + this.props.id} className="post-box"><button className="btn btn-default">Details</button></Link>
+                <Link to={"/posts/" + this.props.id} className="post-box">
+                    <button className="btn btn-default">Details</button></Link>
                 <hr/>
             </div>
         )
