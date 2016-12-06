@@ -24,7 +24,7 @@ ReactDOM.render(
                 <IndexRoute component={Posts}/>
                 <Route path=":postId" component={Details}/>
             </Route>
-            <Route path="about" component={About}/>
+            <Route path="about/:userId" component={About}/>
             <Route path="login" component={Login}/>
             <Route path="register" component={Register}/>
             <Route path="logout" component={Logout}/>

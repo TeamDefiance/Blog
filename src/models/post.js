@@ -27,17 +27,17 @@ function deletePost(postId, callback) {
 }
 
 function edit(postId, name, description, callback) {
-    let postData = {
+    let teamData = {
         title: name,
         content: description
     };
-    update('appdata', 'posts/' + postId, postData, 'kinvey')
+    update('appdata', 'posts/' + postId, teamData, 'kinvey')
         .then(callback(true));
 }
 
-function loadUsersDetails(postId, onUsersSuccess) {
-    get('user', `?query={"postId": "${postId}"}`, 'kinvey')
-        .then(onUsersSuccess);
+function loadAuthorsDetails(userId, onAuthorsSuccess) {
+    get('appdata', `authors?query={"user_id":"${userId}"}`, 'kinvey')
+        .then(onAuthorsSuccess);
 }
 
-export {loadPosts, create, loadPostDetails, deletePost, edit, loadUsersDetails}
+export {loadPosts, create, loadPostDetails, deletePost, edit, loadAuthorsDetails}

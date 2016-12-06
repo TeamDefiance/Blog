@@ -31,19 +31,32 @@ function login(username, password, callback) {
 }
 
 // user/register
-function register(username, password, callback) {
+function register(username, password, fullName, email, phone, callback) {
     let userData = {
         username,
         password
     };
 
     requester.post('user', '', userData, 'basic')
-        .then(registerSuccess);
+        .then(registerSuccessUsers);
 
-    function registerSuccess(userInfo) {
-        observer.showSuccess('Successful registration.');
+    function registerSuccessUsers(userInfo) {
         saveSession(userInfo);
-        callback(true);
+        let user_id = userInfo._id;
+        let authorData = {
+            user_id,
+            fullName,
+            email,
+            phone
+        };
+
+        requester.post('appdata', 'authors', authorData, 'kinvey')
+            .then(registerSuccess);
+
+        function registerSuccess(userInfo) {
+            observer.showSuccess('Successful registration.');
+            callback(true);
+        }
     }
 }
 
