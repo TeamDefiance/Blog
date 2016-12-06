@@ -3,7 +3,7 @@ import {Link} from 'react-router';
 
 export default class HomePage extends Component {
     render() {
-        let message = <p>You are currently not logged in. Please, log in or register to view team options.</p>;
+        let message = <p>You are currently not logged in. Please, log in or register to view, create and edit posts.</p>;
 
         if (sessionStorage.getItem('username')) {
             if (sessionStorage.getItem('teamId')) {

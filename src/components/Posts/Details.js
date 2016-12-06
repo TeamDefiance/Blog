@@ -84,17 +84,20 @@ export default class Details extends Component {
                     canEdit={this.state.canEdit}
                     author={this.state.author}
                 />
+
+                <CommentBox
+                    text={this.state.text}
+                    onChangeHandler={this.onChangeHandler}
+                    onCommentSubmitHandler={this.onCommentSubmitHandler}
+                />
+                <h3>Comments</h3>
                 {this.state.comments.map(function (c) {
                     return <Comment
                         text={c.text}
                         author={c.author}
                     />
                 })}
-                <CommentBox
-                    text={this.state.text}
-                    onChangeHandler={this.onChangeHandler}
-                    onCommentSubmitHandler={this.onCommentSubmitHandler}
-                />
+
             </div>
         )
     }
