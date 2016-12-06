@@ -3,7 +3,8 @@ import {loadPostDetails} from '../../models/post';
 import PostControls from './PostControls';
 import './Details.css';
 import CommentBox from '../Comments/CommentBox';
-import {addComment} from '../../models/comment';
+import Comment from '../Comments/Comment';
+import {addComment, loadComments} from '../../models/comment';
 
 export default class Details extends Component {
     constructor(props) {
@@ -13,6 +14,7 @@ export default class Details extends Component {
             title: '',
             content: '',
             author: '',
+            comments: [],
             canEdit: false
         };
         sessionStorage.setItem("canEdit",false);
@@ -22,6 +24,7 @@ export default class Details extends Component {
     bindEventHandlers() {
         this.onChangeHandler = this.onChangeHandler.bind(this);
         this.onCommentSubmitHandler = this.onCommentSubmitHandler.bind(this);
+        this.onCommentsLoadSuccess = this.onCommentsLoadSuccess.bind(this);
         this.onLoadSuccess = this.onLoadSuccess.bind(this);
         this.statusChange = this.statusChange.bind(this);
     }
@@ -32,6 +35,15 @@ export default class Details extends Component {
 
     componentDidMount() {
         loadPostDetails(this.props.params.postId, this.onLoadSuccess);
+        loadComments(this.props.params.postId, this.onCommentsLoadSuccess);
+    }
+
+    onCommentsLoadSuccess(response) {
+        let newState = {
+            comments: response
+        };
+
+        this.setState(newState);
     }
 
     onLoadSuccess(response) {
@@ -56,7 +68,7 @@ export default class Details extends Component {
 
     onCommentSubmitHandler(event) {
         event.preventDefault();
-        addComment(this.props.params.postId, this.state.text, sessionStorage.getItem('username'), () => this.context.router.push('/posts/' + this.props.params.postId));
+        addComment(this.props.params.postId, this.state.text, sessionStorage.getItem('username'), () => location.reload());
         this.setState({text: ''});
     }
 
@@ -72,6 +84,12 @@ export default class Details extends Component {
                     canEdit={this.state.canEdit}
                     author={this.state.author}
                 />
+                {this.state.comments.map(function (c) {
+                    return <Comment
+                        text={c.text}
+                        author={c.author}
+                    />
+                })}
                 <CommentBox
                     text={this.state.text}
                     onChangeHandler={this.onChangeHandler}

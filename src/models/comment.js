@@ -11,4 +11,9 @@ function addComment(postId, text, author, callback) {
         .then(callback);
 }
 
-export {addComment}
+function loadComments(postId, callback) {
+    get('appdata', `comments?query={"postId":"${postId}"}`, 'kinvey')
+        .then(callback)
+}
+
+export {addComment, loadComments}
