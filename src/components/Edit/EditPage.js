@@ -40,7 +40,7 @@ export default class EditPage extends Component {
     onSubmitHandler(event) {
         event.preventDefault();
         this.setState({submitDisabled: true});
-        edit(this.props.params.teamId, this.state.title, this.state.content, this.onSubmitResponse);
+        edit(this.props.params.postId, this.state.title, this.state.content, this.onSubmitResponse);
     }
 
     onSubmitResponse(response) {

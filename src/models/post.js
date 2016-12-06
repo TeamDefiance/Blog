@@ -26,12 +26,12 @@ function deletePost(postId, callback) {
 
 }
 
-function edit(teamId, name, description, callback) {
-    let teamData = {
+function edit(postId, name, description, callback) {
+    let postData = {
         title: name,
         content: description
     };
-    update('appdata', 'posts/' + teamId, teamData, 'kinvey')
+    update('appdata', 'posts/' + postId, postData, 'kinvey')
         .then(callback(true));
 }
 

@@ -1,10 +1,8 @@
 import React, {Component} from 'react';
 import Post from './Post';
 import {loadPosts} from '../../models/post';
-//import {Link} from 'react-router';
-//import observer from '../../models/observer';
 
-export default class CatalogPage extends Component {
+export default class PostsPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
