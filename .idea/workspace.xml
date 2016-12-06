@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28915fdb-88b6-498e-bf06-43633b19d2b6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/Create/CreateForm.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Comments/CommentBox.js" afterPath="$PROJECT_DIR$/src/components/Comments/CommentBox.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Home/HomePage.js" afterPath="$PROJECT_DIR$/src/components/Home/HomePage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Posts/Details.css" afterPath="$PROJECT_DIR$/src/components/Posts/Details.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Posts/Details.js" afterPath="$PROJECT_DIR$/src/components/Posts/Details.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Create/CreatePage.js" afterPath="$PROJECT_DIR$/src/components/Create/CreatePage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Edit/EditPage.js" afterPath="$PROJECT_DIR$/src/components/Edit/EditPage.js" />
     </list>
     <ignored path="MVC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,11 +43,41 @@
       <file leaf-file-name="CreatePage.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/Create/CreatePage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+            <state relative-caret-position="210">
+              <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Edit/EditForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EditPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Edit/EditPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="618">
+              <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateForm.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Create/CreateForm.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" column="83" selection-start-line="27" selection-start-column="83" selection-end-line="27" selection-end-column="83" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,7 +173,6 @@
         <option value="$PROJECT_DIR$/src/models/user.js" />
         <option value="$PROJECT_DIR$/src/components/Catalog/TeamControls.js" />
         <option value="$PROJECT_DIR$/src/components/Catalog/CatalogPage.js" />
-        <option value="$PROJECT_DIR$/src/components/Create/CreateForm.js" />
         <option value="$PROJECT_DIR$/src/models/team.js" />
         <option value="$PROJECT_DIR$/src/components/Catalog/Details.css" />
         <option value="$PROJECT_DIR$/src/index.css" />
@@ -153,14 +180,12 @@
         <option value="$PROJECT_DIR$/src/components/PostsPage/PostsPage.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Edit/EditForm.js" />
-        <option value="$PROJECT_DIR$/src/components/Create/CreatePage.js" />
         <option value="$PROJECT_DIR$/src/components/Catalog/Details.js" />
         <option value="$PROJECT_DIR$/src/components/Posts/TeamControls.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/components/Posts/Post.js" />
         <option value="$PROJECT_DIR$/src/models/requester.js" />
         <option value="$PROJECT_DIR$/src/components/Delete/DeletePage.js" />
-        <option value="$PROJECT_DIR$/src/components/Edit/EditPage.js" />
         <option value="$PROJECT_DIR$/src/models/post.js" />
         <option value="$PROJECT_DIR$/src/components/common/Header.js" />
         <option value="$PROJECT_DIR$/src/components/Posts/PostsPage.js" />
@@ -172,6 +197,9 @@
         <option value="$PROJECT_DIR$/src/components/Comments/CommentBox.js" />
         <option value="$PROJECT_DIR$/src/components/Posts/Details.css" />
         <option value="$PROJECT_DIR$/src/components/Posts/PostControls.js" />
+        <option value="$PROJECT_DIR$/src/components/Create/CreateForm.js" />
+        <option value="$PROJECT_DIR$/src/components/Edit/EditPage.js" />
+        <option value="$PROJECT_DIR$/src/components/Create/CreatePage.js" />
       </list>
     </option>
   </component>
@@ -372,11 +400,11 @@
       <recent name="C:\Users\Viktor Kostadinov\WebstormProjects\JSAppsProblems\MVC\src\components\Home" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Create" />
       <recent name="$PROJECT_DIR$/src/components" />
       <recent name="C:\Users\User\Desktop\Blog\src\components" />
       <recent name="C:\Users\User\Desktop\Blog\src\components\Posts" />
       <recent name="C:\Users\User\Desktop\Blog\src\components\PostsPage" />
-      <recent name="C:\Users\User\Desktop\Blog\public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.start">
@@ -467,12 +495,20 @@
       <workItem from="1480932540201" duration="18428000" />
       <workItem from="1480961325128" duration="2881000" />
       <workItem from="1481026077856" duration="8783000" />
-      <workItem from="1481050826507" duration="6347000" />
+      <workItem from="1481050826507" duration="7326000" />
     </task>
+    <task id="LOCAL-00001" summary="Edited Details Page view">
+      <created>1481057353319</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1481057353319</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90526000" />
+    <option name="totallyTimeSpent" value="91505000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -536,6 +572,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Edited Details Page view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited Details Page view" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="2" />
@@ -546,7 +586,6 @@
     <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <entry file="file://$PROJECT_DIR$/src/components/entityView.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Catalog/List.js" />
-    <entry file="file://$PROJECT_DIR$/src/components/Create/CreateForm.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Catalog/Team.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -711,16 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Edit/EditPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="73" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#39#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Delete/DeletePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="73">
@@ -756,14 +785,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Edit/EditForm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="87" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="87" />
           <folding />
         </state>
       </provider>
@@ -902,10 +923,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Edit/EditForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Edit/EditPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Create/CreateForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="83" selection-start-line="27" selection-start-column="83" selection-end-line="27" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Create/CreatePage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
+        <state relative-caret-position="210">
+          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

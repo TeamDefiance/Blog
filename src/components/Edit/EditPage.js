@@ -56,7 +56,7 @@ export default class EditPage extends Component {
     render() {
         return (
             <div>
-                <h1>Edit Page</h1>
+                <h1>Edit Post</h1>
                 <EditForm
                     title={this.state.title}
                     content={this.state.content}

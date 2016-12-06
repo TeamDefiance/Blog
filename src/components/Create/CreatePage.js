@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import CreateForm from '../Edit/EditForm';
+import CreateForm from '../Create/CreateForm';
 import {create} from '../../models/post';
 
 export default class CreatePage extends Component {
@@ -36,8 +36,7 @@ export default class CreatePage extends Component {
     render() {
         return (
             <div>
-                <h1>Create New Post
-                </h1>
+                <h1>Your New Post</h1>
                 <CreateForm
                     title={this.state.title}
                     content={this.state.content}
