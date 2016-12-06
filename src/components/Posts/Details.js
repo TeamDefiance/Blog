@@ -9,6 +9,7 @@ export default class Details extends Component {
     constructor(props) {
         super(props);
         this.state ={
+            text: '',
             title: '',
             content: '',
             author: '',
