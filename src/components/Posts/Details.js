@@ -9,12 +9,12 @@ export default class Details extends Component {
     constructor(props) {
         super(props);
         this.state ={
-            text: '',
             title: '',
             content: '',
+            author: '',
             canEdit: false
         };
-
+        sessionStorage.setItem("canEdit",false);
         this.bindEventHandlers();
     }
 
@@ -36,10 +36,12 @@ export default class Details extends Component {
     onLoadSuccess(response) {
         let newState = {
             title: response.title,
-            content: response.content
+            content: response.content,
+            author: response._acl.creator
         };
         if (response._acl.creator === sessionStorage.getItem('userId')) {
             newState.canEdit = true;
+
         }
         this.setState(newState);
     }
@@ -57,6 +59,7 @@ export default class Details extends Component {
         this.setState({text: ''});
     }
 
+
     render() {
 
         return (
@@ -66,8 +69,9 @@ export default class Details extends Component {
                 <PostControls
                     postId={this.props.params.postId}
                     canEdit={this.state.canEdit}
+                    author={this.state.author}
                 />
-                <CommentBox 
+                <CommentBox
                     text={this.state.text}
                     onChangeHandler={this.onChangeHandler}
                     onCommentSubmitHandler={this.onCommentSubmitHandler}
