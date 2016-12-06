@@ -28,7 +28,7 @@ ReactDOM.render(
             <Route path="login" component={Login}/>
             <Route path="register" component={Register}/>
             <Route path="logout" component={Logout}/>
-            <Route path="edit/:teamId" component={Edit}/>
+            <Route path="edit/:postId" component={Edit}/>
             <Route path="create" component={Create}/>
             <Route path="delete/:postId" component={DeletePost}/>
         </Route>

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Post from './Post';
 import {loadPosts} from '../../models/post';
-import {Link} from 'react-router';
+//import {Link} from 'react-router';
 //import observer from '../../models/observer';
 
 export default class CatalogPage extends Component {

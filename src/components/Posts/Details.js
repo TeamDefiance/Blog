@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {loadPostDetails, loadUsersDetails} from '../../models/post';
+import {loadPostDetails} from '../../models/post';
 import PostControls from './TeamControls';
 import './Details.css';
 

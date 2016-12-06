@@ -15,9 +15,9 @@ function create(title, content, callback) {
         .then(callback);
 }
 
-function loadPostDetails(postId, onTeamSuccess) {
+function loadPostDetails(postId, onPostSuccess) {
     get('appdata', 'posts/' + postId, 'kinvey')
-        .then(onTeamSuccess);
+        .then(onPostSuccess);
 }
 
 function deletePost(postId, callback) {
@@ -35,4 +35,9 @@ function edit(teamId, name, description, callback) {
         .then(callback(true));
 }
 
-export {loadPosts, create, loadPostDetails, deletePost, edit}
+function loadUsersDetails(postId, onUsersSuccess) {
+    get('user', `?query={"postId": "${postId}"}`, 'kinvey')
+        .then(onUsersSuccess);
+}
+
+export {loadPosts, create, loadPostDetails, deletePost, edit, loadUsersDetails}
