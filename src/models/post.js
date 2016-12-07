@@ -1,8 +1,13 @@
 import {get, post, update, deleteItem} from './requester';
 
 function loadPosts(callback) {
-    // Request teams from db
+    // Request posts from db
     get('appdata', 'posts', 'kinvey')
+        .then(callback);
+}
+
+function loadRecentPosts(callback) {
+    get('appdata', 'posts?limit=3&sort={"_kmd.lmt": -1}', 'kinvey')
         .then(callback);
 }
 
@@ -40,4 +45,4 @@ function loadAuthorsDetails(userId, onAuthorsSuccess) {
         .then(onAuthorsSuccess);
 }
 
-export {loadPosts, create, loadPostDetails, deletePost, edit, loadAuthorsDetails}
+export {loadPosts, loadRecentPosts, create, loadPostDetails, deletePost, edit, loadAuthorsDetails}

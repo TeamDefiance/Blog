@@ -17,12 +17,12 @@ export default class PostsPage extends Component {
     }
 
     onLoadSuccess(response) {
-        // Display teams
+        // Display posts
         this.setState({posts: response})
     }
 
     componentDidMount() {
-        // Request list of teams from the server
+        // Request list of posts from the server
         loadPosts(this.onLoadSuccess);
     }
 
