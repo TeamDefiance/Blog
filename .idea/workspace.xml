@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="28915fdb-88b6-498e-bf06-43633b19d2b6" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/Footer.css" afterPath="$PROJECT_DIR$/src/components/common/Footer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/common/Footer.js" afterPath="$PROJECT_DIR$/src/components/common/Footer.js" />
     </list>
     <ignored path="MVC.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -510,7 +508,7 @@
       <workItem from="1480961325128" duration="2881000" />
       <workItem from="1481026077856" duration="8783000" />
       <workItem from="1481050826507" duration="15281000" />
-      <workItem from="1481103850960" duration="1487000" />
+      <workItem from="1481103850960" duration="1533000" />
     </task>
     <task id="LOCAL-00001" summary="Edited Details Page view">
       <created>1481057353319</created>
@@ -540,11 +538,18 @@
       <option name="project" value="LOCAL" />
       <updated>1481101632283</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Edited Footer visualization">
+      <created>1481105367018</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1481105367018</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100947000" />
+    <option name="totallyTimeSpent" value="100993000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -557,7 +562,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1280" height="716" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24384432" sideWeight="0.66270787" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32854864" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -613,7 +618,8 @@
     <MESSAGE value="Added CreateForm" />
     <MESSAGE value="Edited All Posts view (and minor content fixes)" />
     <MESSAGE value="Edited About Author view" />
-    <option name="LAST_COMMIT_MESSAGE" value="Edited About Author view" />
+    <MESSAGE value="Edited Footer visualization" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edited Footer visualization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
