@@ -68,7 +68,9 @@ export default class Details extends Component {
 
     onCommentSubmitHandler(event) {
         event.preventDefault();
-        addComment(this.props.params.postId, this.state.text, sessionStorage.getItem('username'), () => location.reload());
+        addComment(this.props.params.postId, this.state.text,
+            sessionStorage.getItem('username'),
+            () => loadComments(this.props.params.postId, this.onCommentsLoadSuccess));
         this.setState({text: ''});
     }
 
