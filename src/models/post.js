@@ -2,7 +2,7 @@ import {get, post, update, deleteItem} from './requester';
 
 function loadPosts(callback) {
     // Request posts from db
-    get('appdata', 'posts', 'kinvey')
+    get('appdata', 'posts?sort={"_kmd.lmt": -1}', 'kinvey')
         .then(callback);
 }
 
