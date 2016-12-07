@@ -59,5 +59,23 @@
 .form-group textarea {
     display: inline-block;
     width: 100%;
+    border-radius: 5px;
 }
 
+.author-info {
+    padding: 1em;
+    background-color: lightgrey;
+    border-radius: 5px;
+}
+
+.author-info label {
+    width:5em;
+}
+.author-data {
+    padding: 1em;
+    margin: 1em;
+    background-color: white;
+    border-radius: 5px;
+    display: inline-block;
+    width: 97%;
+}

@@ -4,6 +4,7 @@ import Navbar from './components/common/Navbar';
 import Infobox from  './components/common/Infobox';
 import {Link} from 'react-router';
 import observer from './models/observer';
+import Footer from './components/common/Footer';
 
 class App extends Component {
     constructor(props) {
@@ -56,6 +57,7 @@ class App extends Component {
                 </Header>
                 {this.props.children}
                 <Infobox/>
+                <Footer/>
             </div>
         )
     }
