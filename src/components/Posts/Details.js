@@ -91,8 +91,9 @@ export default class Details extends Component {
                     onCommentSubmitHandler={this.onCommentSubmitHandler}
                 />
                 <h3>Comments</h3>
-                {this.state.comments.map(function (c) {
+                {this.state.comments.map(function (c, i) {
                     return <Comment
+                        key={i}
                         text={c.text}
                         author={c.author}
                     />
