@@ -1,4 +1,4 @@
-import {get, post, update, deleteItem} from './requester';
+import {get, post} from './requester';
 
 function addComment(postId, text, author, callback) {
     let commentData = {
